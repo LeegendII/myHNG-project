@@ -1,5 +1,5 @@
 {
-  "name": "toptech",
+  "name": "lone-DEV",
   "description": "profile card",
   "scripts": {
     "start": "vite",
@@ -11,4 +11,5 @@
     "vite": "latest"
   },
   "devDependencies": {}
+
 }
