@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Card - Stage 0</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="profile-card.css">
+</head>
+<body>
+    <article class="profile-card" data-testid="test-profile-card">
+        <div class="card-content">
+            <aside class="avatar-container">
+                <figure>
+                    <img 
+                        src="./images/loneDEV.png" 
+                        alt="Profile picture of John Doe"
+                        class="avatar-image"
+                        data-testid="test-user-avatar"
+                    >
+                </figure>
+            </aside>
+
+            <div class="profile-header">
+                <header>
+                    <h2 class="user-name" data-testid="test-user-name">Owoyemi Michael</h2>
+                </header>
+
+                <p class="user-bio" data-testid="test-user-bio">
+                    Full-stack developer passionate about creating accessible and user-friendly web applications. 
+                    I love solving complex problems and building products that make a positive impact on people's lives.
+                </p>
+
+                <div class="timestamp-section">
+                    <div class="timestamp-label">Current Timestamp</div>
+                    <div class="user-time" data-testid="test-user-time" id="timestamp"></div>
+                </div>
+
+                <nav class="social-navigation" aria-label="Social media links">
+                    <ul class="social-links" data-testid="test-user-social-links">
+                        <li>
+                            <a 
+                                href="https://x.com/@journeywithmic" 
+                                target="_blank" 
+                                rel="noopener noreferrer"
+                                class="social-link"
+                                data-testid="test-user-social-twitter"
+                            >
+                              <i class="fab fa-x"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a 
+                                href="https://github.com/leegendii" 
+                                target="_blank" 
+                                rel="noopener noreferrer"
+                                class="social-link"
+                                data-testid="test-user-social-github"
+                            >
+                               <i class="fab fa-github"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a 
+                                href="https://linkedin.com/in/johndoe" 
+                                target="_blank" 
+                                rel="noopener noreferrer"
+                                class="social-link"
+                                data-testid="test-user-social-linkedin"
+                            >
+                            <i class="fab fa-linkedin"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a 
+                                href="https://https://www.instagram.com/journeywithmic" 
+                                target="_blank" 
+                                rel="noopener noreferrer"
+                                class="social-link"
+                                data-testid="test-user-social-linkedin"
+                            >
+                            <i class="fab fa-instagram"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+
+                <section class="info-section">
+                    <h3 class="section-title">🎯 Hobbies</h3>
+                    <ul class="info-list" data-testid="test-user-hobbies">
+                        <li class="info-item">Playing guitar</li>
+                        <li class="info-item">Hiking and outdoor photography</li>
+                        <li class="info-item">Reading sci-fi novels</li>
+                        <li class="info-item">Playing Video Games</li>
+                    </ul>
+                </section>
+
+                <section class="info-section dislikes-section">
+                    <h3 class="section-title">❌ Dislikes</h3>
+                    <ul class="info-list" data-testid="test-user-dislikes">
+                        <li class="info-item">Poor documentation in code</li>
+                        <li class="info-item">Traffic jams</li>
+                        <li class="info-item">Overcooked pasta</li>
+                        <li class="info-item">Loud chewing sounds</li>
+                    </ul>
+                </section>
+            </div>
+        </div>
+    </article>
+
+    <script>
+        // Update timestamp on load and every second
+        function updateTimestamp() {
+            const timestampElement = document.getElementById('timestamp');
+            const currentTime = Date.now();
+            timestampElement.textContent = currentTime;
+        }
+
+        // Initial update
+        updateTimestamp();
+
+        // Update every second to keep it current
+        setInterval(updateTimestamp, 1000);
+    </script>
+</body>
+</html>
