@@ -104,7 +104,9 @@
         .social-navigation {
             margin-top: 20px;
         }
-
+        .social-navigations {
+            margin-top: 20px;
+        }
         .social-links {
             display: flex;
             justify-content: center;
@@ -135,6 +137,48 @@
             outline: 2px solid #667eea;
             outline-offset: 2px;
         }
+      /* Container for centering */
+.local-linked {
+            display: inline-flex;
+            align-items: center;
+            gap:20px;
+            padding: 10px 20px;
+            background: #667eea;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 14px;
+            transition: all 0.3s ease;
+}
+
+
+/* Link styling */
+.local-linked a {
+     display: flex;
+            justify-content: center;
+            gap: 16px;
+            flex-wrap: wrap;
+            list-style: none;
+}
+
+/* Hover effect */
+.local-linked a:hover,
+.local-linked a:focus {
+            background: #5568d3;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+            outline: 2px solid #667eea;
+            outline-offset: 2px;
+}
+@media (max-width: 640px) {
+  .local-linked a {
+    font-size: 1rem;
+    padding: 10px 16px;
+  }
+}
+
+/* Responsive adjustments */
 
         .info-section {
             margin-top: 24px;
@@ -190,6 +234,9 @@
 
             .timestamp-section {
                 text-align: left;
+            }
+            .local-linked {
+                justify-content: flex-start;
             }
         }
 
