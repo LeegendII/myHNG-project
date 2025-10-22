@@ -275,3 +275,67 @@ MIT License - Feel free to use this code for your own projects!
 ---
 
 Built with ❤️ for Frontend Wizards Stage 0
+
+
+# 🌐 Stage 1 Frontend Project — Multi-Page Application
+
+This project is part of the **Frontend Stage 1 task** where I expanded my Stage 0 single-page project into a **multi-page web application**.  
+It includes two new pages: a **Contact Us** form with validation and an **About Me** page built using semantic and accessible HTML.
+
+---
+
+## 🚀 Project Overview
+
+The goal of this project is to demonstrate:
+- Use of **semantic HTML** and **accessible design**.
+- Implementation of **form validation** (HTML + JavaScript or React).
+- Building a **multi-page structure**.
+- Ensuring **responsiveness** across all devices.
+- Maintaining **clean, modular, and testable code**.
+
+---
+
+## 🧱 Pages
+
+### 1️⃣ Contact Us Page
+This page features a fully validated contact form.
+
+**Fields & Test IDs:**
+- Full Name — `data-testid="test-contact-name"`
+- Email — `data-testid="test-contact-email"`
+- Subject — `data-testid="test-contact-subject"`
+- Message — `data-testid="test-contact-message"`
+- Submit Button — `data-testid="test-contact-submit"`
+- Error Messages — `data-testid="test-contact-error-<field>"`
+- Success Message — `data-testid="test-contact-success"`
+
+**Validation Rules:**
+- All fields are required  
+- Email must be in a valid format (`name@example.com`)  
+- Message must be at least 10 characters long  
+- Displays success message only when form is valid
+
+**Accessibility:**
+- All inputs have `<label>` tags linked via the `for` attribute  
+- Error messages tied to inputs with `aria-describedby`  
+- Entire form is keyboard accessible  
+
+---
+
+### 2️⃣ About Me Page
+A reflective page sharing details about my journey, goals, and thoughts.
+
+**Required Sections:**
+- Bio — `data-testid="test-about-bio"`
+- Goals in this program — `data-testid="test-about-goals"`
+- Areas of low confidence — `data-testid="test-about-confidence"`
+- Note to future self — `data-testid="test-about-future-note"`
+- Extra thoughts — `data-testid="test-about-extra"`
+
+**Structure:**
+All sections are wrapped inside:
+```html
+<main data-testid="test-about-page">
+  <section>...</section>
+</main>
+
